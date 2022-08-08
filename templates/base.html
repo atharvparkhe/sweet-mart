@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- responsive tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title tag -->
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <!-- favicon/logo -->
+    <link rel="icon" href="{% static 'image/logo.png' %}" sizes="32x32" type="image/png">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/styling.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- SEO tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <li><a href="{% url 'index' %}">
+                <img src="{% static 'img/logo.png' %}" width="125px">
+            </a></li>
+        </div>
+        <nav>
+            <ul id="menuitem">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                <li><a href="{% url 'all-products' %}">PRODUCTS</a></li>
+                <li><a href="{% url 'blog' blog_id %}">BLOG</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+            </ul>
+        </nav>
+        {% if request.user.is_authenticated %}
+            <a  href="{% url 'cart' %}">
+                <img src="{% static 'img/cart.png' %}" width="30px" height="30px">
+            </a>
+            {% if qw > 0 %}
+                <p class="yo1">{{qw}}</p>
+            {% endif %}
+        {% else %}
+            <a  href="{% url 'login' %}"><img src="{% static 'img/cart.png' %}" width="30px" height="30px"></a>
+        {% endif %}
+        <img src="{% static 'img/menu.jpg' %}" width="30px" height="30px" class="menu" onclick="menutoggle()">
+    </div>
+
+    <!-- toast message -->
+    <!-- <div class="wrapper">
+        <div id="toast">
+            <div class="container-1">
+                <i class="fas fa-check-square"></i>
+            </div>
+            <div class="container-2">
+                <p>Success</p>
+                <p>Your changes are saved successfully.</p>
+            </div>
+            <button id="close" onclick="closeToast()">
+                &times;
+            </button>
+        </div>
+    </div>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="imp_msg" >{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    <button id="show-toast" onclick="showToast()">Show</button> -->
+
+        <!-- Content -->
+    {% block content %}
+    {% endblock content %}
+</div>
+    <footer>
+        <div class="footer" >
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="footrecol1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android And IOS Mobile Phone</p>
+                        <div class="applogo">
+                            <a href=""><img src="{% static 'img/play.png' %}" width="150px" height="75px"></a>
+                            <a href=""><img src="{% static 'img/app.svg' %}" width="150px" height="80px"></a>
+                        </div>
+                    </div>
+                    <div class="footrecol2">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}"></a>
+                        <p>Our purpose is to sustainably make the pleasure<br> and benefit of sweets accessible to the many</p>
+                    </div>
+                    <div class="footrecol3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <a href=""><li>Coupons</li></a>
+                            <a href=""><li>Blog Post</li></a>
+                            <a href=""><li>Return Policy</li></a>
+                            <a href=""><li>Join Affilate</li></a>
+                        </ul>
+                    </div>
+                    <div class="footrecol4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href=""><img src="{% static 'img/facebook.svg' %}" width="20px" height="20px"> Facebook</a></li>
+                            <li><a href=""><img src="{% static 'img/instagram.svg' %}" width="20px" height="20px"> Instagram</a></li>
+                            <li><a href=""><img src="{% static 'img/twitter.svg' %}" width="20px" height="20px"> Twitter</a></li>
+                            <li><a href=""><img src="{% static 'img/youtube.svg' %}" width="20px" height="20px"> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copy">© Copyright 2021 - Sweet Cart</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // navbar collapse
+        var menuitem = document.getElementById("menuitem")
+        menuitem.style.maxHeight = "0px";
+        function menutoggle() {
+            if (menuitem.style.maxHeight == "0px") {
+                menuitem.style.maxHeight = "200px";
+            }
+            else {
+                menuitem.style.maxHeight = "0px";
+            }
+        }
+        // toast message
+        let x;
+        let toast = document.getElementById("toast");
+        function showToast(){
+            clearTimeout(x);
+            toast.style.transform = "translateX(0)";
+            x = setTimeout(()=>{
+                toast.style.transform = "translateX(400px)"
+            }, 4000);
+        }
+        function closeToast(){
+            toast.style.transform = "translateX(400px)";
+        }
+    </script>
+</body>
+</html>

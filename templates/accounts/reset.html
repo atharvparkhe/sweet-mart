@@ -1,0 +1,25 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Reset | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+    <div class="formbox">
+        <img class="y" src="{% static 'img/reset.png' %}"  width="100px" height="100px">
+        <h3 class="x">Reset password</h3>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="imp_msg" >{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        <form method="POST" class="inputgrp">
+        {% csrf_token %}
+            <input type="password" name="npw" class="inputfeild" placeholder="NEW PASSWORD" required>
+            <input type="password" name="cpw" class="inputfeild" placeholder="CONFERM PASSWORD" required>
+            <div class="abcd"><a href="">        </a></div>
+            <button type="submit" class="submitbtn">RESET PASSWORD</button>
+        </form>
+    </div>
+    {% endblock content %}

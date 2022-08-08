@@ -1,0 +1,91 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ item_obj.name | safe }} | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+
+<div class="smallcon singlepro">
+    <div class="row">
+        <div class="colx">
+            <img src="{{ item_obj.img.url }}" width="500" height="700">
+        </div>
+        <div class="col3">
+            <h1>{{ item_obj.name | safe }}</h1>
+            <p class="i">{{item_obj.ratings | safe }} &#9733; </p>
+            <h4>Rs.{{ item_obj.price | safe }}</h4>
+                {% csrf_token %}
+                <input name="qunatity" type="number" value="1">kg
+                <br><br>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'add-to-cart' item_obj.id %}" class="btn">Add to Cart</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn">Log in to add to Cart</a>
+                {% endif %}
+            <h3>Product detail  &#8594;</h3>
+            <br>
+            <p>{{ item_obj.description | safe }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="smallcon">
+    <h2 class="title">Similar Products</h2>
+    <div class="row">
+        {% for j in similar_products %}
+            <a class="col4" href="{% url 'product' j.id %}">
+            <div>
+                <img src="{{ j.img.url }}" width="300px" height="400px">
+                <h4>{{ j.name | safe }}</h4>
+                <p>Rs.{{ j.price | safe }}</p>
+            </div></a>
+        {% endfor %}
+    </div>
+
+<div class="blogcontent">
+    <div class="comment">
+        <h2>Add a review</h2>
+        <form class="commentf" method="POST">
+            {% csrf_token %}
+            {% if request.user.is_authenticated %}
+            <div class="star-rating">
+                <input type="radio" id="5-stars" name="star" value="5">
+                <label for="5-stars" class="star">&#9733;</label>
+                <input type="radio" id="4-stars" name="star" value="4">
+                <label for="4-stars" class="star">&#9733;</label>
+                <input type="radio" id="3-stars" name="star" value="3">
+                <label for="3-stars" class="star">&#9733;</label>
+                <input type="radio" id="2-stars" name="star" value="2">
+                <label for="2-stars" class="star">&#9733;</label>
+                <input type="radio" id="1-star" name="star" value="1">
+                <label for="1-star" class="star">&#9733;</label>
+            </div>
+            <textarea rows="5" name="review" placeholder="Add your Review"></textarea>
+            <button type="submit" class="btn">Post Review</button>
+            {% else %}
+                <p>Please <a href="{% url 'login' %}">Login</a> to post a comment</p>
+            {% endif %}
+        </form>
+        <br>
+        {% if reviews %}
+        <h2>What others say About this product</h2>
+        {% for review in reviews %}
+        <div class="formboxx">
+            <h3>{{review.customer.name}}</h3>
+            <p class="i">{{review.stars}} &#9733;</p> 
+            <p>{{review.review}}</p>
+            <p class="o">{{review.created_at}}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+</div>
+{% endblock content %}

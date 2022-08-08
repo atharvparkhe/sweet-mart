@@ -1,0 +1,119 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Checkout | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+<h2 class="title">Checkout</h2>
+<div class="smallcon cart">
+    <table>
+        <tr>
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+        </tr>
+        {% for i in cart_items_obj %}
+            <tr>
+                <td>
+                    <div class="cartinfo">
+                        <a href="../product/{{i.item.id}}/">
+                            <img src="{{ i.item.img.url }}">
+                            <div>
+                                <p>{{ i.item.name | safe }}</p>
+                                <small>Rs. {{ i.item.price | safe }}</small>
+                                <br>
+                            </div>
+                        </a>
+                    </div>
+                </td>
+                <td>Rs. {{ i.total | safe }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>Rs. {{cart_obj.total_price}}</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>30 %</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>Rs. {{cart_obj.total_amt}}</td>
+            </tr>
+        </table>
+    </div>
+    <h2 class="title">Address</h2>
+    {% if cart_obj.address %}
+        <center>
+            <br><p><b>Phone No. </b>- {{ cart_obj.owner.phone }}</p>
+            <br>
+            <p><b>Address</b> - {{ cart_obj.address.address }}, {{ cart_obj.address.state }}, {{ cart_obj.address.country }}</p>
+            <br>
+            <p><b>Landmark</b> - {{ cart_obj.address.landmark }}, {{ cart_obj.address.town }}</p>
+            <br>
+            <p><b>Pin Code</b> - {{ cart_obj.address.pincode }}</p>
+            <br><br></label>
+            <button type="submit" id="rzp-button1" class="btn22">PROCEED TO PAYMENT</button><br>
+            <br><center><a class="d" href="{% url 'address' %}">Add another address &#8594;</a></center><br> 
+    {% else %}
+        <div class="formbox3">
+            <form method="POST" action="{% url 'select-address' %}">
+                {% csrf_token %}
+                <center><p class="addressselect"><b>Select Address</b></p>
+                {% for address in all_address %}
+                    <br><p><b>Phone No. </b>- {{ cart_obj.owner.phone }}</p>
+                    <br>
+                    <p><b>Address</b> - {{ address.address }}, {{ address.state }}, {{ address.country }}</p>
+                    <br>
+                    <p><b>Landmark</b> - {{ address.landmark }}, {{ address.town }}</p>
+                    <br>
+                    <p><b>Pin Code</b> - {{ address.pincode }}</p>
+                    <br><br></label>
+                    <button type="submit" name="address_id" value="{{address.id}}" class="btn22">SELECT</button><br>
+                    <br><center><a class="d" href="{% url 'address' %}">Add another address &#8594;</a></center><br> 
+                    <br><br>
+                {% endfor %}
+            </form></center>
+        </div>
+    {% endif %}
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script>
+	var options = {
+		"key": "{{key}}", // Enter the Key ID generated from the Dashboard
+		"amount": "{{cart_obj.total_amt}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+		"currency": "INR",
+		"name": "Sweet Mart",
+		"description": "Payment",
+		"image": "{% static 'img/logo.png' %}",
+		"order_id": "{{order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+		"handler": function (response){
+			console.log(response)
+        	window.location.href = `/success/?razorpay_payment_id=${response.razorpay_payment_id}&razorpay_order_id=${response.razorpay_order_id}&razorpay_signature=${response.razorpay_signature}`    
+    	},
+		"prefill": {
+			"name": "{{cart_obj.owner.name}}",
+			"email": "{{cart_obj.owner.email}}",
+			"contact": "{{cart_obj.owner.phone}}"
+		},
+		"notes": {
+			"address": "Razorpay Corporate Office"
+		},
+		"theme": {
+			"color": "#ff2953"
+		}
+	};
+	var rzp1 = new Razorpay(options);
+	document.getElementById('rzp-button1').onclick = function(e){
+		rzp1.open();
+		e.preventDefault();
+	}
+	</script>
+{% endblock content %}

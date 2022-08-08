@@ -1,0 +1,72 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Cart | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+<h2 class="title">Cart</h2>
+<div class="smallcon cart">
+    <table>
+        <tr>
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+        </tr>
+        {% for i in cart_items_obj %}
+            <tr>
+                <td>
+                    <div class="cartinfo">
+                        <a href="../product/{{i.item.id}}/">
+                            <img src="{{ i.item.img.url }}">
+                            <div>
+                                <p>{{ i.item.name | safe }}</p>
+                                <small>Rs. {{ i.item.price | safe }}</small>
+                                <br>
+                                <a href="../delete-from-cart/{{i.item.id}}/" class="btn2">remove</a>
+                            </div>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <a href="../add-to-cart/{{i.item.id}}/">
+                        <img class="as" src="{% static 'img/plus.png' %}">
+                    </a>
+                    <a class="bb">{{ i.quantity | safe }}</a>
+                    <a href="../remove-from-cart/{{i.item.id}}/">
+                        <img class="as" src="{% static 'img/minus.png' %}">
+                    </a>
+                </a></td>
+                <td>Rs. {{ i.total | safe }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td id="subtotal">Rs. {{cart_obj.total_price}}</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td id="tax">30 %</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="total">Rs. {{cart_obj.total_amt}}</td>
+            </tr>
+        </table>
+        
+    </div>
+    <br><br>
+        <form class="commentfx" method="POST" action="/cart/apply-coupon/{{cart_obj.id}}/">
+            {% csrf_token %}
+            <input class="ag" name="coupon" type="text" placeholder="Enter the coupon code"><br>
+            <button type="submit" class="btn22"> Apply Coupon </button>
+        </form>
+    <center><a href="{% url 'checkout' %}" name="submit_btn" class="btn">BUY NOW</a></center>
+</div>
+
+{% endblock content %}

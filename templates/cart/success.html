@@ -1,0 +1,18 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Success | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+<div class="formbox">
+    <img class="y" src="{% static 'img/checked.png' %}" width="100px" height="100px">
+    <h3 class="mess">Payment was Sucessful</h3>
+    <br>
+    <p class="message">Your Order will be dilivered in 2 days</p>
+    <br>
+    <a href="{% url 'all-products' %}" class="btn3"> Continue Shopping </a>
+    <br>
+</div>
+{% endblock content %}

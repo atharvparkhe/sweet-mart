@@ -1,0 +1,49 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ blog_obj.title | safe }} Blog | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+<h2 class="title">{{ blog_obj.title | safe }}</h2>
+<section class="blogcontent">
+    <div class="blogleft">
+        <img src="{{ blog_obj.img.url }}" width="900px" height="600px">
+        <p>{{ blog_obj.content | safe }}</p>
+
+        <div class="comment">
+            <h2>Leave a Comment</h2>
+            <form class="commentf" action="{% url 'add-blog-comment' blog_id %}" method="POST">
+                {% csrf_token %}
+                {% if request.user.is_authenticated %}
+                    <textarea name="cmt" rows="5" placeholder="add your comment" required></textarea>
+                    <input type="hidden" name="blgid" value="{{ blog_obj.id }}">
+                    <button type="submit" class="btn">Post Comment</button>
+                {% else %}
+                    <p>Please <a href="{% url 'login' %}">Login</a> to post a comment</p>
+                {% endif %}
+            </form>
+            {% if blog_cmt %}
+                <br><hr><br>
+                <h2>Comments</h2>
+                {% for q in blog_cmt %}
+                <div class="formboxx">
+                    <h3>{{q.person.name}}</h3>
+                    <p>{{q.comment}}</p>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <h1 class="title">Other Blogs</h1>
+        {% for i in other_blogs %}
+        <a href="{% url 'blog' i.id %}">
+            <div class="formbox1">
+                <h1>{{ i.title | safe }}  &#8594;</h1>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}

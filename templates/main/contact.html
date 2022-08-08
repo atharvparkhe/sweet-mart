@@ -1,0 +1,50 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}
+    Sweet Mart
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h2 class="title">Contact Us</h2>
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.8435842615295!2d73.81898051477846!3d15.492843458741197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0928211990f%3A0xec46e52423fde348!2sSanta%20Inez%2C%20Panaji%2C%20Goa%20403001!5e0!3m2!1sen!2sin!4v1621495590240!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    <section class="contactus">
+        <div class="row">
+            <div class="contactcol">
+                <div>
+                    <i><img src="{% static 'img/placeholder.png' %}" width="20px" height="20px"></i>
+                    <span>
+                        <h5>suj road radhe estate colony</h5>
+                        <p>panaji goa</p>
+                    </span>
+                </div>
+                <div>
+                    <i><img src="{% static 'img/telephone.png' %}" width="20px" height="20px"></i>
+                    <span>
+                        <h5>1234567890</h5>
+                        <p>Monday to Sunday,10am to 9pm</p>
+                    </span>
+                </div>
+                <div>
+                    <i><img src="{% static 'img/mail.png' %}" width="20px" height="20px"></i>
+                    <span>
+                        <h5>sweetmart@gmail.com</h5>
+                        <p>Email for query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contactcol">
+                <form method="POST">
+                {% csrf_token %}
+                    <input class="an" name="name" type="name" placeholder="NAME" required>
+                    <input class="an" name="email" type="email" placeholder="EMAIL ID" required>
+                    <textarea class="an" name="message" rows="8" placeholder="MESSAGE" required></textarea>
+                    <button type="submit" class="btn"> SEND </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}

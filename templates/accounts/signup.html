@@ -1,0 +1,27 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Sign Up | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+    <div class="formbox">
+        <img class="y" src="{% static 'img/add-user.png' %}"  width="100px" height="100px">
+        <h3 class="x">Sign up</h3>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="imp_msg" >{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        <form method="POST" class="inputgrp1">
+        {% csrf_token %}
+            <input type="text" name="name" class="inputfeild" placeholder="NAME" required>
+            <input type="email" name="email" class="inputfeild" placeholder="EMAIL ID" required>
+            <input type="password" name="password" class="inputfeild" placeholder="PASSWORD" required>
+            <div class="abcd"><a href="">        </a></div>
+            <button type="submit" class="submitbtn">Sign Up</button>
+            <div class="abcd"><a href="{% url 'login' %}">Already have an Account?</a></div>
+        </form>
+    </div>
+{% endblock content %}

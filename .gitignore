@@ -1,0 +1,11 @@
+.env
+
+env
+
+.DS_Store
+
+.vs_code
+
+*.log
+
+__pycache__

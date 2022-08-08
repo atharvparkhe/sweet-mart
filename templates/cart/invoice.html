@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      width: 750px;
+      margin: auto;
+      padding: 50px;
+    }
+  </style>
+  <title>INVOICE</title>
+</head>
+<body>
+  <div class="container">
+    <div class="invoice-container" ref="document" id="html">
+      <table style="width:100%; height:auto;  text-align:center; " BORDER=0 CELLSPACING=0>
+        <thead style="background:#fafafa; padding:8px;">
+          <tr style="font-size: 20px;">
+            <center><td colspan="4" style="padding:20px 20px;text-align: center;">S W E E T - M A R T</td></center>
+          </tr>
+        </thead>
+        <tbody style="background:#ffff;padding:20px;">
+          <tr>
+            <td colspan="4" style="padding:20px 0px 0px 20px;text-align:left;font-size: 16px; font-weight: bold;color:#000;">Invoiced to : {{cart_obj.owner.name}}</td>
+          </tr>
+          <tr>
+            <td colspan="4" style="text-align:left;padding:10px 10px 10px 20px;font-size:14px; font-weight: bold;color:#000;">Your order details</td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width:100%; height:auto; background-color:#fff;text-align:center; padding:10px; background:#fafafa">
+        <tbody>
+          <tr style="color:#6c757d; font-size: 20px;">
+            <td style="border-right:1.5px dashed  #DCDCDC; width:25%;font-size:12px;font-weight:700;padding: 0px 0px 10px 0px;">Order Date</td>
+            <td style="border-right: 1.5px dashed  #DCDCDC ;width:25%;font-size:12px;font-weight:700;padding: 0px 0px 10px 0px;">Order No.</td>
+            <td style="border-right:1.5px dashed  #DCDCDC ;width:25%;font-size:12px;font-weight:700;padding: 0px 0px 10px 0px;">Payment</td>
+            <td style="width:25%;font-size:12px;font-weight:700;padding: 0px 0px 10px 0px;">Shipping Address</td>
+          </tr>
+          <tr style="background-color:#fff; font-size:12px; color:#262626;">
+            <td style="border-right:1.5px dashed  #DCDCDC ;width:25%; font-weight:bold;background: #fafafa;">{{cart_obj.updated_at}}</td>
+            <td style="border-right:1.5px dashed  #DCDCDC ;width:25% ; font-weight:bold;background: #fafafa;">{{cart_obj.id}}</td>
+            <td style="border-right:1.5px dashed  #DCDCDC ;width:25%; font-weight:bold;background: #fafafa;">Online Payment</td>
+            <td style="width:25%; font-weight:bold;background: #fafafa;">{{cart_obj.address.address}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="width:100%; height:auto; background-color:#fff; margin-top:0px;  padding:20px; font-size:12px; border: 1px solid #ebebeb; border-top:0px;">
+        <thead>
+          <tr style=" color: #6c757d;font-weight: bold; padding: 5px;">
+            <td colspan="2" style="text-align: left;">PURCHASE INFORMATION</td>
+            <td style="text-align: center;">PRICE</td>
+            <td style="padding: 10px;text-align:center;">QUANTITY</td>
+            <td style="text-align: right;padding: 10px;">TOTAL</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for item in cart_items %}
+            <td style="width:30%;margin-left:10px;text-align: center;">{{item.item.name}}</td>
+            <td style="width:20%;padding: 10px; text-align:center;">{{item.item.cost}}</td>
+            <td style="width:20%;padding: 10px;text-align: center;">{{item.quantity}}</td>
+            <td style="width:30%; ;font-weight: bold;font-size: 14px;">
+              <table style="width:100%;">
+                <tr>
+                  <td style="text-align:end;font-size:13px;">{{item.total}} &dollar;</td>
+                </tr>
+              </table>
+            </td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+      <table style="width:100%; height:auto; background-color:#fff;padding:20px; font-size:12px; border: 1px solid #ebebeb; border-top:0">
+        <tbody>
+          <tr style="padding:20px;color:#000;font-size:15px">
+            <td style="font-weight: bold;padding:5px 0px">Total after tax</td>
+            <td style="text-align:right;padding:5px 0px;font-weight: bold;font-size:16px;">{{cart_obj.total_amt}} &dollar;;</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="font-weight:bold;"><span style="color:#c61932;font-weight: bold;">THANK YOU</span> for shipping with us!</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="font-weight:bold;text-align:left;padding:5px 0px 0px 00px;font-size:14px;">Sweet-Mart</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

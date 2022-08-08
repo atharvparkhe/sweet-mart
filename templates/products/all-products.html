@@ -1,0 +1,24 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    All Products Blog | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+
+<div class="smallcon">
+    <h2 class="title">All Product</h2>
+    <div class="row">
+        {% for i in products %}
+            <a class="col4" href="{% url 'product' i.id %}">
+            <div>
+                <img src="{{ i.img.url }}" width="300px" height="400px">
+                <h4>{{ i.name | safe }}</h4>
+                <p>Rs.{{ i.price | safe }}</p>
+            </div></a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

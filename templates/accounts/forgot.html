@@ -1,0 +1,19 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Forgot | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+    <div class="formbox">
+        <img class="y" src="{% static 'img/enter.png' %}"  width="100px" height="100px">
+        <h3 class="x">Forgot the password</h3>
+        <form id="login" method="POST" class="inputgrp">
+            {% csrf_token %}
+            <input type="email" name="email" class="inputfeild" placeholder="ENTER YOUR EMAIL ID" required>
+            <div class="abcd"><a href="">        </a></div>
+            <button type="submit" class="submitbtn">ENTER</button>
+        </form>
+    </div>
+    {% endblock content %}

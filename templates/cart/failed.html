@@ -1,0 +1,18 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Failed | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+<div class="formbox">
+    <img class="y" src="{% static "img/warning.png" %}" width="100px" height="100px">
+    <h3 class="mess">Payment Failed</h3>
+    <div class="abcd"><a href=""> </a></div>
+    <p class="message">There was An Unexpected error</p>
+    <br>
+    <a href="{% url 'index' %}" class="btn3">Go Back</a>    
+    <br>
+</div>
+{% endblock content %}

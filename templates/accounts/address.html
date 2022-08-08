@@ -1,0 +1,27 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+    Address | Sweet Mart
+{% endblock title %}
+
+{% block content %}
+
+    <div class="formbox2">
+        <div class="contactcol ">
+            <h2 class="title">shipping details</h2>
+            <form method="POST">
+            {% csrf_token %}
+                <input class="an" name="phone" type="text" placeholder="ENTER YOUR PHONE NUMBER" required>
+                <input class="an" name="town" type="text" placeholder="ENTER YOUR TOWN" required>
+                <input class="an" name="state" type="text" placeholder="ENTER YOUR STATE" required>
+                <input class="an" name="landmark" type="text" placeholder="ENTER YOUR NEAREST LANDMARK" required>
+                <input class="an" name="pincode" type="text" placeholder="ENTER YOUR PINCODE" required>
+                <input class="an" name="country" type="text" placeholder="ENTER YOUR COUNTRY" required>
+                <textarea class="an" name="address" rows="5" placeholder="ENTER YOUR COMPLETE ADDRESS" required></textarea>
+                <center><button type="submit" class="btn">CHECKOUT</button></center>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,94 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}
+    Sweet Mart
+{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <h1>Life Is Short,<br> So Make It Sweet Here!</h1>
+                <p>“At work, rest and play, you get three great tastes in a Milky Way”– Butterfinger.</p>
+                <a href="{% url 'all-products' %}" class="btn">Explore now &#8594;</a>
+            </div>
+            <div class="col-2"><img src="{% static 'img/front.png' %}" width="599px"></div>
+        </div>
+    </div>
+
+    <div class="smallcon">
+        <h2 class="title">Top Selling Products</h2>
+        <div class="row">
+            {% for j in top_selling_products %}
+                <a class="col4" href="{% url 'product' j.id %}">
+                <div>
+                    <img src="{{ j.img.url }}" width="300px" height="400px">
+                    <h4>{{ j.name | safe }}</h4>
+                    <p>Rs.{{ j.price | safe }}</p>
+                </div></a>
+            {% endfor %}
+        </div>
+        <h2 class="title">About Us</h2>
+        <div class="row">
+            <div class="info">
+                <p class=>A confectionery store more commonly referred to as a sweet<br> shop in the United Kingdom, a
+                    candy store in North America, or a lolly shop in Australia<br>sells confectionery and the intended
+                    market is usually children. <br>Most confectionery stores are filled with an assortment of sweets
+                    far larger than<br> a grocer or convenience store could accommodate.<br> They often offer a
+                    selection of old-fashioned treats and sweets from different countries.<br> Very often unchanged in
+                    layout since their inception, <br>confectioneries are known for their warming and nostalgic
+                    feel.<br> The village of Pateley Bridge claims to<br> have the oldest confectionery store in
+                    England.</p>
+            </div>
+            <div class="sec"><img src="{% static 'img/sweets.jpeg' %}" width="450px"></div>
+        </div>
+    </div>
+
+    <h2 class="title">Our Team</h2>
+    <div class="feedback">
+        <div class="smallcon">
+            <div class="row">
+                <div class="col3">
+                    <h3>yoyo honey singh</h3>
+                    <img src="{% static "img/hu1.jpg" %}">
+                    <p>“I can tell how hard you’ve worked to be more
+                        during meetings. Yesterday, although disagreed with
+                        David’s idea, you asked some good questions first.
+                        team is better for it.”</p>
+                    <div class="z">
+                        <a href=""><img src="{% static "img/twitter.svg" %}" width="20px" height="20px"></a>
+                        <a href=""><img src="{% static "img/instagram.svg" %}"width="20px" height="20px"></a>
+                        <a href=""><img src="{% static "img/linkedin.svg" %}" width="20px" height="20px"></a>
+                    </div>
+                </div>
+                <div class="col3">
+                    <h3>yoyo honey singh</h3>
+                    <img src="{% static "img/hu1.jpg" %}">
+                    <p>“I can tell how hard you’ve worked to be more
+                        during meetings. Yesterday, although disagreed with
+                        David’s idea, you asked some good questions first.
+                        team is better for it.”</p>
+                    <div class="z">
+                        <a href=""><img src="{% static "img/twitter.svg" %}" width="20px" height="20px"></a>
+                        <a href=""><img src="{% static "img/instagram.svg" %}" width="20px" height="20px"></a>
+                        <a href=""><img src="{% static "img/linkedin.svg" %}" width="20px" height="20px"></a>
+                    </div>
+                </div>
+                <div class="col3">
+                    <h3>yoyo honey singh</h3>
+                    <img src="{% static "img/hu1.jpg" %}">
+                    <p>“I can tell how hard you’ve worked to be more
+                        during meetings. Yesterday, although disagreed with
+                        David’s idea, you asked some good questions first.
+                        team is better for it.”</p>
+                    <div class="z">
+                        <a href=""><img src="{% static "img/twitter.svg" %}" width="20px" height="20px"></a>
+                        <a href=""><img src="{% static "img/instagram.svg" %}" width="20px" height="20px"></a>
+                        <a href=""><img src="{% static "img/linkedin.svg" %}" width="20px" height="20px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
