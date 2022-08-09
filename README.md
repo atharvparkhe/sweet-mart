@@ -108,6 +108,8 @@ pip install --upgrade pip -r requirements.txt
 python manage.py runserver
 ```
 
+- Open `http://127.0.0.1:8000/` or `http://localhost:8000/` on your browser.
+
 *Check the terminal if any error.*
 
 
@@ -124,7 +126,7 @@ The docs folder contain all the project documentations and screenshots of the pr
 
 ### 🧑🏻‍💻 Demo
 
-![Implementation](docs/abc.gif)
+
 
 YouTube Link : https://youtu.be/CZClbyfqftY
 
