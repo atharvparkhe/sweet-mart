@@ -7,7 +7,7 @@ Customer authentication is done using *Django Authentication*. Database used is 
 
 ### 🔗 Content
 
-* [Overview](#sweet-mart-(e-shop-application))
+* [Overview](#sweet-mart-e-shop-application)
 * [Content](#-content)
 * [Features](#-features)
 * [Tech Stack](#-tech-stack)
