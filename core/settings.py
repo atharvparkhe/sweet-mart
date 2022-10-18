@@ -2,6 +2,9 @@ import os
 from pathlib import Path
 from decouple import config
 
+import pymysql 
+pymysql.install_as_MySQLdb()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure-n&u79dcexa#n=))^@l@*2lp73&lp$xfo!+(4g&kyfok@g!ump-"
@@ -57,12 +60,24 @@ AUTH_USER_MODEL = 'base.BaseUser'
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config("DB_NAME"),
+        'USER': config("DB_USER"),
+        'PASSWORD': config("DB_PASSWORD"),
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

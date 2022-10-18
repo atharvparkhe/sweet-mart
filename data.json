@@ -1,0 +1,881 @@
+[
+{
+    "model": "sessions.session",
+    "pk": "kqq67efeneamvkrmaq3g5csc63v6nsvf",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQRdG9uCZWbM_4Q0nPGqIZ20MCKJHyqRB7h0gpoH73vJfqaFv7blvq3A1FnZW3ybkM2BBmaiDk0MSabCNOyHoxGDmo0y9jyo867rbcabxNOk_jOg-s90Qf66KvU6nPy9H-HfS09F8tAAhiRCx7MGBsACSWkIhJ2sQiPlhvkIijs75NVDEmwZJyycVX9f4A3SpBkQ:1oKvCC:boyaakVaoGEEFekt2-_SymWEKqwzVYr9aAxk2ct9xvE",
+        "expire_date": "2022-08-22T05:20:56.927"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "oqptbqel4r1my82ubj1dnvk8jxvgx8be",
+    "fields": {
+        "session_data": ".eJxVzDkOwjAQheG7uMaWt_FCSc8Zohl7TAIokbJUiLtDpBRQv_97L9HhtvbdtvDcDVWcRcw-GJ9REqYoPbgmqbGWrFs1RevsgMTplxGWB4-7rXccb5Mq07jOA6k9Uce6qOtU-Xk52r-DHpf-q31A66Nj79Ai5YDRJNDJYKzUMqVWaoHABZzjmoLJ4LyJbAkgmGRBvD_kuECO:1oKuP5:_rvG-VWRlZINOzzG9plWVTRbv6bWS0Pl3ZL8iGiC3vw",
+        "expire_date": "2022-08-22T04:30:11.259"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zppab00ye8pikptxjzepfbukpyoldjub",
+    "fields": {
+        "session_data": ".eJxVzDsOwjAQRdG9uCaW48_YpqRnDdHMeEwCKJHyqRB7h0gpoH73vJfqcFv7bltk7oaizgpsdo59aDAwNj5ybJJk21RX0UJtQ6KoTr-MkB8y7rbccbxNmqdxnQfSe6KPddHXqcjzcrR_Bz0u_VezseQLiyVOBkwrTM5myJXASZEUjDdQyTgfoJQ2gMNabExCCSODU-8P6TFBSQ:1nJcLI:XGXV9jtnUJJ23tKPUkxP2FvitDqmYhoPqIRAK_Eyavs",
+        "expire_date": "2022-02-28T14:28:40.644"
+    }
+},
+{
+    "model": "base.baseuser",
+    "fields": {
+        "password": "pbkdf2_sha256$390000$4MYFg6Tl1PHOzLtE0CXJcS$buoH0+agz38K1vn4d9xJjO0qi4eFbBEY15XUKn0HBRU=",
+        "last_login": "2022-08-08T05:20:56.925",
+        "created_at": "2022-08-08T05:10:00.029",
+        "updated_at": "2022-02-14T14:18:31.679",
+        "email": "atharv@gmail.com",
+        "name": "Atharva",
+        "phone": "1234567890",
+        "is_verified": true,
+        "is_staff": false,
+        "is_superuser": false,
+        "is_active": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.baseuser",
+    "fields": {
+        "password": "pbkdf2_sha256$390000$9S6FinWmZdznVApM3yuLy1$HmCPdL0v3gCumcHdil3F5Mp1ZXmEL/mVNECORHjwIwA=",
+        "last_login": "2022-08-08T05:09:46.264",
+        "created_at": "2022-02-14T13:51:38.156",
+        "updated_at": "2022-02-14T13:51:38.153",
+        "email": "admin@admin.com",
+        "name": "",
+        "phone": null,
+        "is_verified": false,
+        "is_staff": true,
+        "is_superuser": true,
+        "is_active": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "authentication.customers",
+    "fields": {
+        "baseuser_ptr": [
+            "atharv@gmail.com"
+        ],
+        "token": "8e9991e8-8434-4ea5-82f2-2b66744c7c80"
+    }
+},
+{
+    "model": "authentication.customeraddress",
+    "pk": "b83754f7-fdbc-4f5b-ba33-028194bc0c82",
+    "fields": {
+        "created_at": "2022-02-14T14:27:36.396",
+        "updated_at": "2022-02-14T14:27:36.396",
+        "customer": [
+            "atharv@gmail.com"
+        ],
+        "address": "H No : 1234, XYZ colony, near ABC company, Panaji, Goa",
+        "pincode": "123456",
+        "town": "Panaji",
+        "landmark": "ABC company",
+        "state": "Goa",
+        "country": "India"
+    }
+},
+{
+    "model": "app.blogmodel",
+    "pk": "030a56fc-4e54-496c-8033-4e657ea9b229",
+    "fields": {
+        "created_at": "2022-02-14T13:52:52.959",
+        "updated_at": "2022-02-14T13:52:52.959",
+        "title": "Royal Round Gulab Jamun",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper. Integer condimentum vulputate dolor, porta tincidunt enim tempor non. Maecenas id mi vestibulum, tincidunt tellus eu, fringilla nunc. Morbi orci nibh, congue eget ante vitae, porttitor tempus nisi. Vestibulum ac pellentesque libero. Aliquam rutrum et ex a porta. Ut tristique ante ligula, ut scelerisque ipsum suscipit in. Nunc vulputate rutrum odio sit amet molestie. Suspendisse eu bibendum neque.\r\n\r\nDonec sit amet ipsum laoreet, scelerisque nulla id, posuere nisi. Donec eget scelerisque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ut ullamcorper magna. Nulla vehicula elementum urna, quis efficitur erat bibendum ac. Nulla facilisi. Integer rutrum nibh nec nunc tristique, et mattis dolor ornare. Nam est dui, interdum consectetur dignissim in, dignissim sed felis. Praesent in auctor risus. Suspendisse urna ligula, luctus posuere quam ut, dapibus molestie justo. Quisque gravida hendrerit rutrum. Sed vitae justo quis ligula pellentesque rutrum in posuere magna. Nullam est nisl, dignissim id elit nec, gravida feugiat tellus. Fusce gravida nisi sed neque condimentum porta.\r\n\r\nPellentesque tempus eros ut tincidunt eleifend. Nam convallis ut sem a venenatis. Nunc sapien diam, dictum eu posuere in, eleifend et lectus. Curabitur sed felis finibus, auctor lorem sed, vehicula nibh. Aenean et leo mi. Maecenas commodo lectus in sapien pharetra ultrices. Fusce ac sem nisl. Sed fermentum ipsum id odio placerat mollis. Aenean consequat aliquam velit, a scelerisque arcu. Ut ut nibh non nisl ultricies tincidunt.",
+        "img": "blogs/gwer.jpeg"
+    }
+},
+{
+    "model": "app.blogmodel",
+    "pk": "5721453f-9f17-481e-b2fa-b26fdb26d88b",
+    "fields": {
+        "created_at": "2022-02-14T13:53:32.603",
+        "updated_at": "2022-02-14T13:53:32.603",
+        "title": "Festive Healthy Modak",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper. Integer condimentum vulputate dolor, porta tincidunt enim tempor non. Maecenas id mi vestibulum, tincidunt tellus eu, fringilla nunc. Morbi orci nibh, congue eget ante vitae, porttitor tempus nisi. Vestibulum ac pellentesque libero. Aliquam rutrum et ex a porta. Ut tristique ante ligula, ut scelerisque ipsum suscipit in. Nunc vulputate rutrum odio sit amet molestie. Suspendisse eu bibendum neque.\r\n\r\nDonec sit amet ipsum laoreet, scelerisque nulla id, posuere nisi. Donec eget scelerisque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ut ullamcorper magna. Nulla vehicula elementum urna, quis efficitur erat bibendum ac. Nulla facilisi. Integer rutrum nibh nec nunc tristique, et mattis dolor ornare. Nam est dui, interdum consectetur dignissim in, dignissim sed felis. Praesent in auctor risus. Suspendisse urna ligula, luctus posuere quam ut, dapibus molestie justo. Quisque gravida hendrerit rutrum. Sed vitae justo quis ligula pellentesque rutrum in posuere magna. Nullam est nisl, dignissim id elit nec, gravida feugiat tellus. Fusce gravida nisi sed neque condimentum porta.\r\n\r\nPellentesque tempus eros ut tincidunt eleifend. Nam convallis ut sem a venenatis. Nunc sapien diam, dictum eu posuere in, eleifend et lectus. Curabitur sed felis finibus, auctor lorem sed, vehicula nibh. Aenean et leo mi. Maecenas commodo lectus in sapien pharetra ultrices. Fusce ac sem nisl. Sed fermentum ipsum id odio placerat mollis. Aenean consequat aliquam velit, a scelerisque arcu. Ut ut nibh non nisl ultricies tincidunt.",
+        "img": "blogs/seds.jpeg"
+    }
+},
+{
+    "model": "app.blogmodel",
+    "pk": "a6f687a2-3ac4-473f-8c90-ba494e0ba597",
+    "fields": {
+        "created_at": "2022-02-14T13:52:36.593",
+        "updated_at": "2022-02-14T13:52:36.593",
+        "title": "Sweet Twisty Jalebi",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper. Integer condimentum vulputate dolor, porta tincidunt enim tempor non. Maecenas id mi vestibulum, tincidunt tellus eu, fringilla nunc. Morbi orci nibh, congue eget ante vitae, porttitor tempus nisi. Vestibulum ac pellentesque libero. Aliquam rutrum et ex a porta. Ut tristique ante ligula, ut scelerisque ipsum suscipit in. Nunc vulputate rutrum odio sit amet molestie. Suspendisse eu bibendum neque.\r\n\r\nDonec sit amet ipsum laoreet, scelerisque nulla id, posuere nisi. Donec eget scelerisque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ut ullamcorper magna. Nulla vehicula elementum urna, quis efficitur erat bibendum ac. Nulla facilisi. Integer rutrum nibh nec nunc tristique, et mattis dolor ornare. Nam est dui, interdum consectetur dignissim in, dignissim sed felis. Praesent in auctor risus. Suspendisse urna ligula, luctus posuere quam ut, dapibus molestie justo. Quisque gravida hendrerit rutrum. Sed vitae justo quis ligula pellentesque rutrum in posuere magna. Nullam est nisl, dignissim id elit nec, gravida feugiat tellus. Fusce gravida nisi sed neque condimentum porta.\r\n\r\nPellentesque tempus eros ut tincidunt eleifend. Nam convallis ut sem a venenatis. Nunc sapien diam, dictum eu posuere in, eleifend et lectus. Curabitur sed felis finibus, auctor lorem sed, vehicula nibh. Aenean et leo mi. Maecenas commodo lectus in sapien pharetra ultrices. Fusce ac sem nisl. Sed fermentum ipsum id odio placerat mollis. Aenean consequat aliquam velit, a scelerisque arcu. Ut ut nibh non nisl ultricies tincidunt.",
+        "img": "blogs/acsd.jpeg"
+    }
+},
+{
+    "model": "app.blogmodel",
+    "pk": "d5fe23c6-df63-4a83-bc0c-e59e8892895d",
+    "fields": {
+        "created_at": "2022-02-14T13:53:12.724",
+        "updated_at": "2022-02-14T13:53:12.724",
+        "title": "Round Juicy Ros Gulla",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper. Integer condimentum vulputate dolor, porta tincidunt enim tempor non. Maecenas id mi vestibulum, tincidunt tellus eu, fringilla nunc. Morbi orci nibh, congue eget ante vitae, porttitor tempus nisi. Vestibulum ac pellentesque libero. Aliquam rutrum et ex a porta. Ut tristique ante ligula, ut scelerisque ipsum suscipit in. Nunc vulputate rutrum odio sit amet molestie. Suspendisse eu bibendum neque.\r\n\r\nDonec sit amet ipsum laoreet, scelerisque nulla id, posuere nisi. Donec eget scelerisque mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ut ullamcorper magna. Nulla vehicula elementum urna, quis efficitur erat bibendum ac. Nulla facilisi. Integer rutrum nibh nec nunc tristique, et mattis dolor ornare. Nam est dui, interdum consectetur dignissim in, dignissim sed felis. Praesent in auctor risus. Suspendisse urna ligula, luctus posuere quam ut, dapibus molestie justo. Quisque gravida hendrerit rutrum. Sed vitae justo quis ligula pellentesque rutrum in posuere magna. Nullam est nisl, dignissim id elit nec, gravida feugiat tellus. Fusce gravida nisi sed neque condimentum porta.\r\n\r\nPellentesque tempus eros ut tincidunt eleifend. Nam convallis ut sem a venenatis. Nunc sapien diam, dictum eu posuere in, eleifend et lectus. Curabitur sed felis finibus, auctor lorem sed, vehicula nibh. Aenean et leo mi. Maecenas commodo lectus in sapien pharetra ultrices. Fusce ac sem nisl. Sed fermentum ipsum id odio placerat mollis. Aenean consequat aliquam velit, a scelerisque arcu. Ut ut nibh non nisl ultricies tincidunt.",
+        "img": "blogs/iukjn.jpeg"
+    }
+},
+{
+    "model": "app.blogcommentsmodel",
+    "pk": "612ebd99-54ee-41cd-94ef-3b3db44e0325",
+    "fields": {
+        "created_at": "2022-02-14T16:42:22.486",
+        "updated_at": "2022-02-14T16:42:22.486",
+        "person": [
+            "atharv@gmail.com"
+        ],
+        "blog": "5721453f-9f17-481e-b2fa-b26fdb26d88b",
+        "comment": "nice blog"
+    }
+},
+{
+    "model": "app.blogcommentsmodel",
+    "pk": "af7bd02c-1c83-47af-8dc4-fcb42fe84bc2",
+    "fields": {
+        "created_at": "2022-08-08T05:22:11.306",
+        "updated_at": "2022-08-08T05:22:11.306",
+        "person": [
+            "atharv@gmail.com"
+        ],
+        "blog": "5721453f-9f17-481e-b2fa-b26fdb26d88b",
+        "comment": "very informative"
+    }
+},
+{
+    "model": "app.products",
+    "pk": "167a33a6-f26c-43c1-9791-10d0d9951f69",
+    "fields": {
+        "created_at": "2022-02-14T14:15:47.824",
+        "updated_at": "2022-02-14T14:14:48.549",
+        "name": "Jalebi",
+        "price": "120.00",
+        "img": "products/sd.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": false,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "22779738-2bc8-447c-a225-453e53acdc05",
+    "fields": {
+        "created_at": "2022-02-14T14:14:38.010",
+        "updated_at": "2022-02-14T14:14:38.010",
+        "name": "Malai Pedha",
+        "price": "170.00",
+        "img": "products/scds.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": true,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "59b3d70f-d98b-4f1b-afc5-fd75e5a5b405",
+    "fields": {
+        "created_at": "2022-02-14T14:15:02.634",
+        "updated_at": "2022-02-14T14:15:02.634",
+        "name": "Kaju Katli",
+        "price": "100.00",
+        "img": "products/vfd.webp",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": false,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "8e9991e8-8434-4ea5-82f2-2b66744c7c80",
+    "fields": {
+        "created_at": "2022-02-14T14:15:54.604",
+        "updated_at": "2022-02-14T13:55:12.616",
+        "name": "Ros Gula",
+        "price": "129.99",
+        "img": "products/casdxcv.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": false,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "9bf01942-bdd9-42dc-a2c2-655b213c77c2",
+    "fields": {
+        "created_at": "2022-02-14T14:25:27.432",
+        "updated_at": "2022-02-14T13:54:57.066",
+        "name": "Barfi",
+        "price": "120.00",
+        "img": "products/barfi.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": false,
+        "ratings": 4.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "b9026446-6992-44e2-ac78-ac72ea498e2a",
+    "fields": {
+        "created_at": "2022-02-14T13:54:45.873",
+        "updated_at": "2022-02-14T13:54:45.873",
+        "name": "Ras Malai",
+        "price": "145.00",
+        "img": "products/ads.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": true,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "eb34cbb0-da72-4098-967c-6b6139317784",
+    "fields": {
+        "created_at": "2022-02-14T13:55:29.066",
+        "updated_at": "2022-02-14T13:55:29.066",
+        "name": "Modak",
+        "price": "110.00",
+        "img": "products/csd.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": false,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.products",
+    "pk": "fcb7b46c-70b6-4509-9499-0661271cff84",
+    "fields": {
+        "created_at": "2022-02-14T14:14:23.109",
+        "updated_at": "2022-02-14T14:14:23.109",
+        "name": "Gulab Jamun",
+        "price": "150.00",
+        "img": "products/gulab.jpeg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, turpis ut iaculis vehicula, nisi libero bibendum turpis, accumsan placerat augue eros id velit. Nullam condimentum est arcu, id mattis libero condimentum sit amet. Maecenas non augue id urna lacinia semper.",
+        "is_top_selling": true,
+        "ratings": 0.0
+    }
+},
+{
+    "model": "app.productreview",
+    "pk": "4b431efb-47d1-49f1-85bf-1091d8a5494a",
+    "fields": {
+        "created_at": "2022-08-08T04:30:55.336",
+        "updated_at": "2022-08-08T04:30:55.336",
+        "product": "167a33a6-f26c-43c1-9791-10d0d9951f69",
+        "customer": [
+            "atharv@gmail.com"
+        ],
+        "stars": 5,
+        "review": "Very Nice Product"
+    }
+},
+{
+    "model": "app.productreview",
+    "pk": "abd0aa9d-6d20-435f-a36d-640ff65db0f1",
+    "fields": {
+        "created_at": "2022-02-14T14:25:07.451",
+        "updated_at": "2022-02-14T14:25:07.451",
+        "product": "9bf01942-bdd9-42dc-a2c2-655b213c77c2",
+        "customer": [
+            "atharv@gmail.com"
+        ],
+        "stars": 4,
+        "review": "nice"
+    }
+},
+{
+    "model": "app.productreview",
+    "pk": "eb8cc97d-22c9-4dda-8879-87d48b7c3e5c",
+    "fields": {
+        "created_at": "2022-02-14T14:25:27.430",
+        "updated_at": "2022-02-14T14:25:27.430",
+        "product": "9bf01942-bdd9-42dc-a2c2-655b213c77c2",
+        "customer": [
+            "atharv@gmail.com"
+        ],
+        "stars": 5,
+        "review": "very nice"
+    }
+},
+{
+    "model": "cart.cartmodel",
+    "pk": "f5fb7b6a-bc2d-49be-a0a9-5b9a18d94be0",
+    "fields": {
+        "created_at": "2022-08-08T05:21:38.464",
+        "updated_at": "2022-08-08T04:32:05.503",
+        "owner": [
+            "atharv@gmail.com"
+        ],
+        "total_price": 160.0,
+        "tax": 0.3,
+        "total_amt": 208.0,
+        "is_paid": false,
+        "coupon_applied": true,
+        "order_id": "order_K31P67B32o5b4C",
+        "payment_id": null,
+        "payment_signature": null,
+        "address": "b83754f7-fdbc-4f5b-ba33-028194bc0c82"
+    }
+},
+{
+    "model": "cart.cartitems",
+    "pk": "3f9953cc-b2d1-4270-973e-f63c068a55eb",
+    "fields": {
+        "created_at": "2022-08-08T05:21:23.209",
+        "updated_at": "2022-08-08T05:21:14.908",
+        "owner": [
+            "atharv@gmail.com"
+        ],
+        "cart": "f5fb7b6a-bc2d-49be-a0a9-5b9a18d94be0",
+        "item": "59b3d70f-d98b-4f1b-afc5-fd75e5a5b405",
+        "quantity": 2,
+        "total": 200.0
+    }
+},
+{
+    "model": "cart.coupons",
+    "pk": "7902baae-e3ad-459b-8798-f4e138e32f61",
+    "fields": {
+        "created_at": "2022-08-08T05:21:33.580",
+        "updated_at": "2022-02-14T14:28:18.612",
+        "coupon_name": "SALE20",
+        "coupon_discount_amount": 0.2,
+        "use_times": 97,
+        "is_deleted": false
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-02-14T13:52:36.595",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "blogmodel"
+        ],
+        "object_id": "a6f687a2-3ac4-473f-8c90-ba494e0ba597",
+        "object_repr": "Sweet Twisty Jalebi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-02-14T13:52:52.963",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "blogmodel"
+        ],
+        "object_id": "030a56fc-4e54-496c-8033-4e657ea9b229",
+        "object_repr": "Royal Round Gulab Jamun",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-02-14T13:53:12.726",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "blogmodel"
+        ],
+        "object_id": "d5fe23c6-df63-4a83-bc0c-e59e8892895d",
+        "object_repr": "Round Juicy Ros Gulla",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-02-14T13:53:32.607",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "blogmodel"
+        ],
+        "object_id": "5721453f-9f17-481e-b2fa-b26fdb26d88b",
+        "object_repr": "Festive Healthy Modak",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-02-14T13:54:45.876",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "b9026446-6992-44e2-ac78-ac72ea498e2a",
+        "object_repr": "Ras Malai",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-02-14T13:54:57.070",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "9bf01942-bdd9-42dc-a2c2-655b213c77c2",
+        "object_repr": "Barfi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-02-14T13:55:12.618",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "8e9991e8-8434-4ea5-82f2-2b66744c7c80",
+        "object_repr": "Ros Gu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-02-14T13:55:29.069",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "eb34cbb0-da72-4098-967c-6b6139317784",
+        "object_repr": "Modak",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-02-14T14:14:23.112",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "fcb7b46c-70b6-4509-9499-0661271cff84",
+        "object_repr": "Gulab Jamun",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-02-14T14:14:38.012",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "22779738-2bc8-447c-a225-453e53acdc05",
+        "object_repr": "Malai Pedha",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-02-14T14:14:48.551",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "167a33a6-f26c-43c1-9791-10d0d9951f69",
+        "object_repr": "Jalebi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-02-14T14:15:02.637",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "59b3d70f-d98b-4f1b-afc5-fd75e5a5b405",
+        "object_repr": "Kaju Katli",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-02-14T14:15:17.922",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "8e9991e8-8434-4ea5-82f2-2b66744c7c80",
+        "object_repr": "Ros Gula",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Is top selling\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-02-14T14:15:47.829",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "167a33a6-f26c-43c1-9791-10d0d9951f69",
+        "object_repr": "Jalebi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is top selling\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-02-14T14:15:54.608",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "products"
+        ],
+        "object_id": "8e9991e8-8434-4ea5-82f2-2b66744c7c80",
+        "object_repr": "Ros Gula",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is top selling\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-02-14T14:22:09.337",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "authentication",
+            "customers"
+        ],
+        "object_id": "62933c45-a5ca-47c7-8e92-f3fa26f158b7",
+        "object_repr": "patharv777@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is verified\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-02-14T14:28:18.615",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "coupons"
+        ],
+        "object_id": "7902baae-e3ad-459b-8798-f4e138e32f61",
+        "object_repr": "SALE20",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-02-14T15:25:12.235",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "597aba0a-fe38-43eb-9691-be43aaf6a5d1",
+        "object_repr": "CartModel object (597aba0a-fe38-43eb-9691-be43aaf6a5d1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-02-14T15:38:15.254",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "597aba0a-fe38-43eb-9691-be43aaf6a5d1",
+        "object_repr": "CartModel object (597aba0a-fe38-43eb-9691-be43aaf6a5d1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-02-14T15:51:00.305",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "authentication",
+            "customeraddress"
+        ],
+        "object_id": "f5c1c11f-5324-43b8-ab8d-3a80e41fd5d0",
+        "object_repr": "CustomerAddress object (f5c1c11f-5324-43b8-ab8d-3a80e41fd5d0)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-02-14T16:38:48.455",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "da809038-167e-443b-a0ca-f80b7618b3a4",
+        "object_repr": "CartModel object (da809038-167e-443b-a0ca-f80b7618b3a4)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-02-14T16:40:54.030",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "da809038-167e-443b-a0ca-f80b7618b3a4",
+        "object_repr": "CartModel object (da809038-167e-443b-a0ca-f80b7618b3a4)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-02-14T16:44:06.137",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "da809038-167e-443b-a0ca-f80b7618b3a4",
+        "object_repr": "CartModel object (da809038-167e-443b-a0ca-f80b7618b3a4)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-02-14T16:44:06.141",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "8e6dbc98-d9ed-4f22-a512-149d8b6d72cb",
+        "object_repr": "CartModel object (8e6dbc98-d9ed-4f22-a512-149d8b6d72cb)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-02-14T16:44:06.143",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "cart",
+            "cartmodel"
+        ],
+        "object_id": "597aba0a-fe38-43eb-9691-be43aaf6a5d1",
+        "object_repr": "CartModel object (597aba0a-fe38-43eb-9691-be43aaf6a5d1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-02-14T16:44:12.328",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "authentication",
+            "customeraddress"
+        ],
+        "object_id": "f5c1c11f-5324-43b8-ab8d-3a80e41fd5d0",
+        "object_repr": "CustomerAddress object (f5c1c11f-5324-43b8-ab8d-3a80e41fd5d0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-08-08T04:26:14.944",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "authentication",
+            "customers"
+        ],
+        "object_id": "62933c45-a5ca-47c7-8e92-f3fa26f158b7",
+        "object_repr": "patharv777@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Token\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-08-08T04:30:55.337",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "app",
+            "productreview"
+        ],
+        "object_id": "4b431efb-47d1-49f1-85bf-1091d8a5494a",
+        "object_repr": "ProductReview object (4b431efb-47d1-49f1-85bf-1091d8a5494a)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-08-08T05:10:00.036",
+        "user": [
+            "admin@admin.com"
+        ],
+        "content_type": [
+            "authentication",
+            "customers"
+        ],
+        "object_id": "62933c45-a5ca-47c7-8e92-f3fa26f158b7",
+        "object_repr": "atharv@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+    }
+}
+]
