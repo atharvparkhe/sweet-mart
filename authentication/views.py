@@ -148,3 +148,4 @@ def Reset(request, token):
         print(e)
         messages.error(request, str(e))
     return render(request, "accounts/reset.html", context)
+
